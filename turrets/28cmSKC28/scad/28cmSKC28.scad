@@ -26,15 +26,15 @@ bp = [[0.5,0], [0.5,27], [34.7,32], [76.7,32], [76.7,0], [35,0]]; //bottom plate
 yPoly(p=bp, px=-32);
 
 //front
-//fp=[[0,0], [0,27], [11.6,27.5], [13,26],[13,0]]; //front plate
-//yPoly(p=fp, px=-31, ry=-70);
+fp=[[0,0], [0,27], [11.6,27.5], [13,26],[13,0]]; //front plate
+yPoly(p=fp, px=-31.5, ry=-70);
 
 //bottom side plates
-//fsp=[[1,0], [35,0], [35,11], [5,11]];//front side plate
-//yPoly(p=fsp, px=-32, py=27, rx=90, rz=8);
+fsp=[[0.75,1], [35,1], [35,11], [4.55,11]];//front side plate
+yPoly(p=fsp, px=-32, py=26.95, rx=90.5, rz=8.3);
 
-//bsp=[[0,0], [42,0], [42,11], [0,11]];//back side plate
-//yPoly(p=bsp, px=2.7, py=31.9, rx=90);
+bsp=[[0,1], [42,1], [42,11], [0,11]];//back side plate
+yPoly(p=bsp, px=2.7, py=32.0, rx=90.5);
 
 //top side plates
 //ftsp=[[0,0], [31,0], [32,15.3], [0,1.8]];//Front top side plate
