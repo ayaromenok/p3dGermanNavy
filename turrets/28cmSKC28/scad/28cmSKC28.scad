@@ -19,6 +19,7 @@ module 28cmSKC28(){
 module half28cmSKC28(){
     
 gunSupport();    
+roofSupport();    
 //bottom
 bp = [[0.5,0], [0.5,27], [34.7,32], [76.7,32], [76.7,0], [35,0]]; //bottom plate
 
@@ -61,6 +62,7 @@ difference(){
 
 
 
+
 //top side plates
 //ftsp=[[0,0], [31,0], [32,15.3], [0,1.8]];//Front top side plate
 //yPoly(p=ftsp, szz=0.7, px=-27.8, py=27.6, pz=11.4, rx=136, rz=8);
@@ -89,6 +91,12 @@ difference(){
 */
 }//module
 
+module roofSupport(){
+    tSup1 = [[18,10],[20,0],[22,0],[22,20.8],[11.5,31],[11,31]];
+    yPoly(p=tSup1, px=0.5, py=0, pz=0, ry=-76);
+    tSup2 = [[18,10],[20,0],[21.5,0],[21.5,20.8],[11,31],[10,31]];
+    yPoly(p=tSup2, px=40, py=0, pz=0, ry=-90);
+}
 module gunSupport(){
 
     sSec=[[1,0],[20,0],[20,10],[4.2,10],[1,3]];
