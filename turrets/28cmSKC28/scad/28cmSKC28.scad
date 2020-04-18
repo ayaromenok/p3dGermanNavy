@@ -29,8 +29,11 @@ difference(){
         ySec(r=70, a=[90,117],px=-18, rz=-90); //bottom back round section
         
     }//union
-    yCyl(rb=28, rt=28, szz=5, pz=-0.5);
+    yCube(szx=20, szy=8, szz=5, px=-20);
+    yCube(szx=20, szy=8, szz=5, px=-20, py=18);    
 }//diff
+//yCyl(rb=35, rt=35, szz=5, pz=-0.5);
+
 
 //front
 fp=[[0,0], [0,27], [11.6,27.5], [13,26],[13,0]]; //front plate
@@ -94,12 +97,10 @@ difference(){
 }//module
 
 module roofSupport(){
-    tSup1 = [[18,10],[20,0],[22,0],[22,20.8],[11.5,31],[11,31]];
-    tSup1bot = [[0,0],[1,0],[1,31],[0,31]];
+    tSup1 = [[18,10],[20,0],[22,0],[22,20.8],[11.5,31],[11,31]];    
     tSup2 = [[18,10],[20,0],[21.5,0],[21.5,20.8],[11,31],[10,31]];
     
-    yPoly(p=tSup1, px=0.5, py=0, pz=0, ry=-76);    
-    yPoly(p=tSup1bot, px=0.5, py=0, pz=0, ry=-90);    
+    yPoly(p=tSup1, px=0.5, py=0, pz=0, ry=-76);        
     yPoly(p=tSup2, px=40, py=0, pz=0, ry=-90);
 }
 module gunSupport(){
@@ -120,8 +121,8 @@ module gunSupport(){
     }//diff
     
     difference(){
-        yPoly(p=sSecExt, px=-32, py=24, pz=0, rx=90);
-        yCube(szx=5, szy=10, szz=10, px=-20, py=24, pz=10);
-        yCyl(r=2.5, szz=10, px=-20, py=29, pz=10, rx=90);    
+        yPoly(p=sSecExt, px=-32, py=23, pz=0, rx=90);
+        yCube(szx=5, szy=10, szz=10, px=-20, py=23, pz=10);
+        yCyl(r=2.5, szz=10, px=-20, py=28, pz=10, rx=90);    
     }//diff
 }//module sunSupport
