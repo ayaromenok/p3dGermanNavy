@@ -29,8 +29,8 @@ difference(){
         ySec(r=70, a=[90,117],px=-18, rz=-90); //bottom back round section
         
     }//union
-    yCube(szx=20, szy=8, szz=5, px=-20);
-    yCube(szx=20, szy=8, szz=5, px=-20, py=18);    
+    yCube(szx=20, szy=8, szz=5, px=-9);
+    yCube(szx=20, szy=8, szz=5, px=-9, py=18);    
 }//diff
 //yCyl(rb=35, rt=35, szz=5, pz=-0.5);
 
@@ -97,8 +97,8 @@ difference(){
 }//module
 
 module roofSupport(){
-    tSup1 = [[18,10],[20,0],[22,0],[22,20.8],[11.5,31],[11,31]];    
-    tSup2 = [[18,10],[20,0],[21.5,0],[21.5,20.8],[11,31],[10,31]];
+    tSup1 = [[20,20],[20,0],[22,0],[22,20.8],[11.5,31],[11,31],[10,31]];    
+    tSup2 = [[20,20],[20,15],[0,15],[0,14],[20,14],[20,0.5],[0,0.5],[0,0],[21.5,0],[21.5,20.8],[11,31],[10,31],[10,31]];
     
     yPoly(p=tSup1, px=0.5, py=0, pz=0, ry=-76);        
     yPoly(p=tSup2, px=40, py=0, pz=0, ry=-90);
