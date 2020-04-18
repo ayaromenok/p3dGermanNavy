@@ -41,7 +41,9 @@ difference(){
     yCyl(r=3.5, szz=10, px=-38, pz=10, ry=90);
     yCube(szx=10, szy=7, szz=10, px=-30, py=18, pz=10);
     yCyl(r=3.5, szz=10, px=-38, py=18, pz=10, ry=90);
+    yCube(szx=10, szy=5, szz=2, px=-30, py=9, pz=8);
 }
+
 
 //bottom side plates
 fsp=[[0.75,1], [35,1], [35,11], [4.55,11]];//front side plate
