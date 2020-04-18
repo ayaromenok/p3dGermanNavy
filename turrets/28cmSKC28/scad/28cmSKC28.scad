@@ -93,22 +93,32 @@ difference(){
 
 module roofSupport(){
     tSup1 = [[18,10],[20,0],[22,0],[22,20.8],[11.5,31],[11,31]];
-    yPoly(p=tSup1, px=0.5, py=0, pz=0, ry=-76);
+    tSup1bot = [[0,0],[1,0],[1,31],[0,31]];
     tSup2 = [[18,10],[20,0],[21.5,0],[21.5,20.8],[11,31],[10,31]];
+    
+    yPoly(p=tSup1, px=0.5, py=0, pz=0, ry=-76);    
+    yPoly(p=tSup1bot, px=0.5, py=0, pz=0, ry=-90);    
     yPoly(p=tSup2, px=40, py=0, pz=0, ry=-90);
 }
 module gunSupport(){
 
-    sSec=[[1,0],[20,0],[20,10],[4.2,10],[1,3]];
+    sSecInt=[[1,0],[32.5,0],[37.6,21.4],[4.2,12.1],[1,3]];
+    sSecExt=[[1,0],[16,0],[16,10],[4.2,12.1],[1,3]];
     
     difference(){
-        yPoly(p=sSec, px=-32, py=9, pz=0, rx=90);
-        yCube(szx=5, szy=10, szz=10, px=-20, py=9, pz=10);
-        yCyl(r=2.5, szz=10, px=-20, py=13, pz=10, rx=90);    
+        yPoly(p=sSecInt, px=-32, py=5, pz=0, rx=90);
+        yCube(szx=5, szy=10, szz=10, px=-20, py=5, pz=10);
+        yCyl(r=2.5, szz=10, px=-20, py=9, pz=10, rx=90);    
     }//diff
 
     difference(){
-        yPoly(p=sSec, px=-32, py=24, pz=0, rx=90);
+        yPoly(p=sSecInt, px=-32, py=14, pz=0, rx=90);
+        yCube(szx=5, szy=10, szz=10, px=-20, py=14, pz=10);
+        yCyl(r=2.5, szz=10, px=-20, py=19, pz=10, rx=90);    
+    }//diff
+    
+    difference(){
+        yPoly(p=sSecExt, px=-32, py=24, pz=0, rx=90);
         yCube(szx=5, szy=10, szz=10, px=-20, py=24, pz=10);
         yCyl(r=2.5, szz=10, px=-20, py=29, pz=10, rx=90);    
     }//diff
