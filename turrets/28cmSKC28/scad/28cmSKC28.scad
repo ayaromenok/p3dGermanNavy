@@ -27,7 +27,14 @@ yPoly(p=bp, px=-32);
 
 //front
 fp=[[0,0], [0,27], [11.6,27.5], [13,26],[13,0]]; //front plate
-yPoly(p=fp, px=-31.5, ry=-70);
+difference(){
+    yPoly(p=fp, px=-31.5, ry=-70);
+
+    yCube(szx=10, szy=7, szz=10, px=-30, pz=10);
+    yCyl(r=3.5, szz=10, px=-40, pz=10, ry=90);
+    yCube(szx=10, szy=7, szz=10, px=-30, py=18, pz=10);
+    yCyl(r=3.5, szz=10, px=-40, py=18, pz=10, ry=90);
+}
 
 //bottom side plates
 fsp=[[0.75,1], [35,1], [35,11], [4.55,11]];//front side plate
@@ -36,11 +43,22 @@ yPoly(p=fsp, px=-32, py=26.95, rx=90.5, rz=8.3);
 bsp=[[0,1], [42,1], [42,11], [0,11]];//back side plate
 yPoly(p=bsp, px=2.7, py=32.0, rx=90.5);
 
+ySec(r=70, a=[90,117],px=-18, rz=-90); //bottom back round section
+
+//back side round section
+btsp=[[0,0], [41.8,0], [45,10.5], [36.9,15.1], [2.5,15.1]];//Back side & top data
+difference(){
+    yArc(r=70, w=0.7, a=[90,116.9], px=-18, rz=-90, szz=18.5);
+    yPoly(p=btsp, szz=15, px=5.9, pz=21.4, py=42.5, rx=135.2);
+    ySec(r=70, a=[89.0,110.5], szz=1.5, px=-12, pz=42.5, rx=-21.6, rz=-90);    
+};
+
+
 //top side plates
 //ftsp=[[0,0], [31,0], [32,15.3], [0,1.8]];//Front top side plate
 //yPoly(p=ftsp, szz=0.7, px=-27.8, py=27.6, pz=11.4, rx=136, rz=8);
 
-//btsp=[[0,0], [41.8,0], [45,10.5], [36.9,15.1], [2.5,15.1]];//Back top side plate
+
 //yPoly(p=btsp, szz=0.7, px=2.9, pz=11.4, py=32,rx=135.2);
 
 
@@ -52,14 +70,7 @@ yPoly(p=bsp, px=2.7, py=32.0, rx=90.5);
 //yPoly(p=crp, szz=0.5, px=5.8, pz=21.5);
 
 
-//back round section
-/*ySec(r=70, a=[90,117],px=-18, rz=-90);
-difference(){
-    yArc(r=70, w=0.7, a=[90,116.9], px=-18, rz=-90, szz=18.5);
-    yPoly(p=btsp, szz=15, px=5.9, pz=21.4, py=42.5, rx=135.2);
-    ySec(r=70, a=[90.0,110.5], szz=1.5, px=-12, pz=42.5, rx=-21.6, rz=-90);    
-}
-*/
+
 
 //back roof plate
 /*
