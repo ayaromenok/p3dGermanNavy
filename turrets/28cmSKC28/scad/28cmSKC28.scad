@@ -25,8 +25,8 @@ bp = [[0.5,0], [0.5,27], [34.7,32], [76.7,32], [76.7,0], [35,0]]; //bottom plate
 
 difference(){    
     union(){
-        yPoly(p=bp, px=-32);
-        ySec(r=70, a=[90,117],px=-18, rz=-90); //bottom back round section
+        yPoly(p=bp, szz=0.6, px=-32);
+        ySec(r=70, a=[90,117], szz=0.6, px=-18, rz=-90); //bottom back round section
         
     }//union
     yCube(szx=20, szy=8, szz=5, px=-9);
@@ -49,10 +49,10 @@ difference(){
 
 
 //bottom side plates
-fsp=[[0.75,1], [35,1], [35,11], [4.55,11]];//front side plate
+fsp=[[0.75,0.6], [35,0.6], [35,11], [4.55,11]];//front side plate
 yPoly(p=fsp, px=-32, py=26.95, rx=90.5, rz=8.3);
 
-bsp=[[0,1], [42,1], [42,11], [0,11]];//back side plate
+bsp=[[0,0.6], [42,0.6], [42,11], [0,11]];//back side plate
 yPoly(p=bsp, px=2.7, py=32.0, rx=90.5);
 
 
