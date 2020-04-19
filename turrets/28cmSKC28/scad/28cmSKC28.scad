@@ -42,8 +42,8 @@ difference(){
 
     yCube(szx=10, szy=7, szz=10, px=-30, pz=10);
     yCyl(r=3.5, szz=10, px=-38, pz=10, ry=90);
-    yCube(szx=10, szy=7, szz=10, px=-30, py=18, pz=10);
-    yCyl(r=3.5, szz=10, px=-38, py=18, pz=10, ry=90);
+    yCube(szx=10, szy=7, szz=10, px=-30, py=19, pz=10);
+    yCyl(r=3.5, szz=10, px=-38, py=19, pz=10, ry=90);
     yCube(szx=10, szy=5, szz=2, px=-30, py=9, pz=8);
 }
 
@@ -115,14 +115,14 @@ module gunSupport(){
     }//diff
 
     difference(){
-        yPoly(p=sSecInt, px=-32, py=14, pz=0, rx=90);
-        yCube(szx=5, szy=10, szz=10, px=-20, py=14, pz=10);
-        yCyl(r=2.5, szz=10, px=-20, py=19, pz=10, rx=90);    
+        yPoly(p=sSecInt, px=-32, py=15, pz=0, rx=90);
+        yCube(szx=5, szy=10, szz=10, px=-20, py=15, pz=10);
+        yCyl(r=2.5, szz=10, px=-20, py=20, pz=10, rx=90);    
     }//diff
     
     difference(){
-        yPoly(p=sSecExt, px=-32, py=23, pz=0, rx=90);
-        yCube(szx=5, szy=10, szz=10, px=-20, py=23, pz=10);
-        yCyl(r=2.5, szz=10, px=-20, py=28, pz=10, rx=90);    
+        yPoly(p=sSecExt, px=-32, py=24, pz=0, rx=90);
+        yCube(szx=5, szy=10, szz=10, px=-20, py=24, pz=10);
+        yCyl(r=2.5, szz=10, px=-20, py=29, pz=10, rx=90);    
     }//diff
 }//module sunSupport
