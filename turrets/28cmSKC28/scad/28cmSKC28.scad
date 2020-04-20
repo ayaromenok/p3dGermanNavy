@@ -32,7 +32,7 @@ difference(){
     yCube(szx=20, szy=8, szz=5, px=-9);
     yCube(szx=20, szy=8, szz=5, px=-9, py=18);    
     
-    yCyl(r=10, szz=5, pz=-0.5);    
+    yCyl(r=10.2, szz=5, pz=-0.5);    
 }//diff
 
 
