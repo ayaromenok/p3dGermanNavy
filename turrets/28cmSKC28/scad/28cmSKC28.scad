@@ -13,6 +13,9 @@ module 28cmSKC28(){
        mirror([0,1,0])
           28cmSKC28half();
     }//union
+    //front holes cover - they are not symmetrical
+    yCube(szx=2, szy=2.5, szz=2, px=-30.2, py=7.8, pz=7.5, ry=-70);
+    yCube(szx=2, szy=2.5, szz=2, px=-30.2, py=-10.2, pz=7.5, ry=-70);
 }
 
 
@@ -50,7 +53,7 @@ difference(){
 }
 
 yCube(szx=1.5, szy=5, szz=0.5, px=-30, py=9, pz=9);
-yCube(szx=2, szy=2.5, szz=2, px=-30.2, py=7.8, pz=7.5, ry=-70);
+
 
 //bottom side plates
 fsp=[[0.75,0.6], [35,0.6], [35,11], [4.55,11]];//front side plate
