@@ -84,6 +84,12 @@ difference(){
         yCube(szy=10,szz=1.4,px=0,py=28,pz=18);
     }//diff
     yCyl(r=2.5, szz=1, px=1, py=27.5, pz=15, rx=-44, ry=-9, sy=1.2);
+
+//side stairs
+   yCube(szx=0.4, szy=14, szz=0.4, px=10, py=26.9, pz=16.5, rx=-45);
+   yCube(szx=0.4, szy=14, szz=0.4, px=13, py=26.9, pz=16.5, rx=-45);
+   yCube(szx=0.4, szy=10, szz=0.4, px=10, py=32, pz=6, rx=90);
+   yCube(szx=0.4, szy=10, szz=0.4, px=13, py=32, pz=6, rx=90);
     
 //top sise plate    
     yPoly(p=btsp, szz=0.7, px=2.9, pz=11.4, py=32,rx=135.2);
