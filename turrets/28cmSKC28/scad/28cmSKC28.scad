@@ -31,8 +31,10 @@ difference(){
     }//union
     yCube(szx=20, szy=8, szz=5, px=-9);
     yCube(szx=20, szy=8, szz=5, px=-9, py=18);    
+    
+    yCyl(r=10, szz=5, pz=-0.5);    
 }//diff
-//yCyl(rb=35, rt=35, szz=5, pz=-0.5);
+
 
 
 //front
@@ -61,19 +63,17 @@ yPoly(p=bsp, px=2.7, py=32.0, rx=90.5);
 btsp=[[0,0], [41.8,0], [45,10.5], [36.9,15.1], [2.5,15.1]];//Back side & top data
 difference(){
     yArc(r=70, w=0.7, a=[90,116.9], px=-18, rz=-90, szz=18.5);
-    yPoly(p=btsp, szz=15, px=5.9, pz=21.4, py=42.5, rx=135.2);
+    yPoly(p=btsp, szz=15, px=5.9, pz=21.4, py=43, rx=135.2);
     ySec(r=70, a=[89.0,110.5], szz=1.5, px=-12, pz=42.5, rx=-21.6, rz=-90);    
 };
 
 
 
-
 //top side plates
-//ftsp=[[0,0], [31,0], [32,15.3], [0,1.8]];//Front top side plate
-//yPoly(p=ftsp, szz=0.7, px=-27.8, py=27.6, pz=11.4, rx=136, rz=8);
+ftsp=[[-0.50,0], [31,0], [32,15.3], [-0.5,1.8]];//Front top side plate
+yPoly(p=ftsp, szz=0.7, px=-27.8, py=27.6, pz=11.4, rx=136, rz=8);
 
-
-//yPoly(p=btsp, szz=0.7, px=2.9, pz=11.4, py=32,rx=135.2);
+yPoly(p=btsp, szz=0.7, px=2.9, pz=11.4, py=32,rx=135.2);
 
 
 //roof
