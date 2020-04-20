@@ -9,14 +9,14 @@ module 28cmSKC28(){
 
     //main turret
     union(){
-       half28cmSKC28();
+       28cmSKC28half();
        mirror([0,1,0])
-          half28cmSKC28();
+          28cmSKC28half();
     }//union
 }
 
 
-module half28cmSKC28(){
+module 28cmSKC28half(){
     
 gunSupport();    
 roofSupport();    
@@ -49,6 +49,8 @@ difference(){
     yCube(szx=10, szy=5, szz=2, px=-30, py=9, pz=8);
 }
 
+yCube(szx=1.5, szy=5, szz=0.5, px=-30, py=9, pz=9);
+yCube(szx=2, szy=2.5, szz=2, px=-30.2, py=7.8, pz=7.5, ry=-70);
 
 //bottom side plates
 fsp=[[0.75,0.6], [35,0.6], [35,11], [4.55,11]];//front side plate
@@ -75,7 +77,7 @@ yPoly(p=ftsp, szz=0.7, px=-27.8, py=27.6, pz=11.4, rx=136, rz=8);
 
 yPoly(p=btsp, szz=0.7, px=2.9, pz=11.4, py=32,rx=135.2);
 
-}//module
+}//module 28cmSKC28half
 
 module roofSupport(){
     tSup1 = [[20,20],[20,0],[22,0],[22,20.8],[11.5,31],[11,31],[10,31]];    
