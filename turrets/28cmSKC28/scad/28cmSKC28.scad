@@ -74,11 +74,19 @@ difference(){
 
 
 
-//top side plates
-ftsp=[[-0.50,0], [31,0], [32,15.3], [-0.5,1.8]];//Front top side plate
-yPoly(p=ftsp, szz=0.7, px=-27.8, py=27.6, pz=11.4, rx=136, rz=8);
-
-yPoly(p=btsp, szz=0.7, px=2.9, pz=11.4, py=32,rx=135.2);
+//top side front plate
+    ftsp=[[-0.50,0], [31,0], [32,15.3], [-0.5,1.8]];//Front top side plate
+    yPoly(p=ftsp, szz=0.7, px=-27.8, py=27.6, pz=11.4, rx=136, rz=8);
+    
+//side cylindrical periscope
+    difference(){
+        yCyl(r=1.5, szz=6, px=1, py=28, pz=17);
+        yCube(szy=10,szz=1.4,px=0,py=28,pz=18);
+    }//diff
+    yCyl(r=2.5, szz=1, px=1, py=27.5, pz=15, rx=-44, ry=-9, sy=1.2);
+    
+//top sise plate    
+    yPoly(p=btsp, szz=0.7, px=2.9, pz=11.4, py=32,rx=135.2);
 
 }//module 28cmSKC28half
 
