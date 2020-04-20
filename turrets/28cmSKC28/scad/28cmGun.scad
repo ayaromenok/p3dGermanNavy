@@ -1,7 +1,7 @@
 include <../../../../lib/lib.scad>
 yVersion(); // 0.1.1.20200211+
 
-28cmGun();
+//28cmGun();
 module 28cmGun(px=0, py=0, pz=0, rx=0, ry=0, rz=0, clr="grey")
 {
     translate([px, py, pz])
